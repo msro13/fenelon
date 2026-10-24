@@ -115,7 +115,8 @@ main .wrap { padding-block: 8px 80px; }
 .foot { font-size: 14px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 40px; max-width: 65ch; }
 
 /* Lightbox */
-.lb { position: fixed; inset: 0; z-index: 50; background: var(--lb-bg); color: var(--lb-ink); display: grid; grid-template-rows: auto 1fr auto; padding: env(safe-area-inset-top, 0px) max(0px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(0px, env(safe-area-inset-left, 0px)); }
+.lb { position: fixed; inset: 0; z-index: 50; background: var(--lb-bg); color: var(--lb-ink); display: grid; grid-template-rows: auto minmax(0, 1fr) auto; grid-template-columns: minmax(0, 1fr); padding: env(safe-area-inset-top, 0px) max(0px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(0px, env(safe-area-inset-left, 0px)); }
+.lb > div { min-width: 0; }
 .lb-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; font-size: 13px; color: var(--lb-muted); background: var(--lb-bar); border-bottom: 1px solid rgba(255,255,255,.06); }
 .lb-bar .pos { margin-right: auto; font-variant-numeric: tabular-nums; }
 .lb-btn { border: 0; background: rgba(255,255,255,.06); color: var(--lb-ink); width: 36px; height: 36px; border-radius: 8px; display: inline-grid; place-items: center; cursor: pointer; }
